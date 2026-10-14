@@ -1,0 +1,47 @@
+{
+ "format": "avsim-studio/1",
+ "params": {
+  "cutT0": 1.97,
+  "cutDur": 2.91,
+  "cutV": 15.52,
+  "pedT0": 7.51,
+  "pedV": 1.4,
+  "busGo": 12.75,
+  "cutDs": -5.4,
+  "tgT": 0.87,
+  "mu": 0.8,
+  "cutGap": 38.23,
+  "cutBrake": 0.0,
+  "pedGap": 5.72,
+  "pedLook": 1,
+  "civil": true
+ },
+ "policy": {},
+ "hazards": [
+  {
+   "x": 140.0,
+   "side": "S",
+   "v": 2.2,
+   "t0": 0.0,
+   "trig": 28.0,
+   "type": "ped"
+  }
+ ],
+ "ego": "planner",
+ "space": {
+  "h0_x": [
+   125,
+   175
+  ],
+  "h0_v": [
+   1.0,
+   3.0
+  ],
+  "h0_trig": [
+   10,
+   45
+  ]
+ },
+ "exposure": 0.02,
+ "why": "Người băng ngang giữa phố, ngoài vạch (jaywalking), bước xuống từ lề phải khi xe ta còn cách trig mét. h0_x 125-175 m: đoạn giữa phố ngay sau vạch qua đường (x = 122) tới chỗ xe ta thực sự đi tới trong 24 s (vị trí cuối trung vị khoảng 174 m); người đi bộ hay cắt ngang lệch khỏi vạch vài chục mét thay vì đi vòng. h0_v 1.0-3.0 m/s: từ đi chậm (tốc độ thiết kế đèn cho người đi bộ của MUTCD là 3.5 ft/s = 1.07 m/s) qua đi nhanh (1.5-2 m/s) đến chạy vội qua đường (khoảng 3 m/s). h0_trig 10-45 m: ở 7-11 m/s đó là 1-4 s trước khi xe tới, đúng cỡ khe thời gian người băng ngang chấp nhận (pedGap của thị trấn có trung vị 4.5 s); dưới 10 m thì không xe nào dừng kịp, không phải lỗi planner. exposure 0.02/chuyến: GIẢ ĐỊNH, chưa có số đo. Lập luận: một chuyến nội đô khoảng 5 km gặp cỡ 1 người băng ngang ngoài vạch ở phía trước, nhưng đa số băng khi xe còn xa hoặc đứng chờ xe qua; giả định khoảng 2% trường hợp người đó bước xuống khi xe còn trong 45 m. Dữ liệu thay thế: đếm trên video camera hành trình / dữ liệu lái xe tự nhiên số lần một người đi bộ ngoài vạch bước vào phần đường khi xe còn cách 10-45 m, chia cho số chuyến."
+}
